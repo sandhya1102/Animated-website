@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Lora;
+    color: white;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+  
+    border-radius: 50px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+.cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #50d404;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+.cursor-circle{
+    height: 300px;
+    width: 300px;
+    background-color: #3e9e0694;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 100px;
+    gap: 80px;
+    font-size: 15px;
+    text-transform: uppercase;
+    position: fixed;
+    z-index: 99;
+}
+
+nav h4 a{
+    text-decoration: none;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+main{
+    position: relative;
+    background-color: rgba(17, 17, 17, 0.24);
+}
+
+.page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 10;
+    
+}
+
+.page1 .arrow{
+    height: 200px;
+    width: 200px;
+    border: 1px solid #95c11e;
+    position: fixed;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -1%;
+    bottom: -2%;
+    background: transparent;
+    transition: all ease-in-out 0.7s;
+
+}
+
+.page,.arrow:hover{
+    scale: 0.4;
+    background-color: #95c11e;
+}
+
+.page1 .arrow i{
+    font-size: 50px;
+    color: white;
+}
+
+.page1 h1{
+    font-size: 120px;
+    font-weight: 900;
+    position: relative;
+}
+
+.page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: #0e0a0a;
+    top: -3px;
+    left: -4px;
+    -webkit-text-stroke: 1px #5eff00;
+    z-index: -1;
+}
+
+.page1 h4{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.page1 p{
+    font-size: 15px;
+    font-weight: 700;
+    width: 40%;
+    
+}
+
+.page2{
+    width: 100%;
+    z-index: 10;
+}
+
+.scroller {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+  
+.scroller h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900;
+    margin-right: 20px;
+    transition: all linear 0.3s;
+    color: #000;
+    -webkit-text-stroke: 2px #ffffff;
+}
+
+.scroller h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+}
+  
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+.about-us img{
+    height: 220px;
+    width: 250px;
+    border-radius:10px ;
+    object-fit: cover;
+}
+
+.about-us {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0 40px;
+    gap: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.about {
+    width:40%;
+}
+
+.about h2{
+    font-size: 80px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.about p{
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.cards-container{
+    position: relative;
+    z-index: 10;
+    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    height: 60vh;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.card{
+    overflow: hidden;
+    width: 24%;
+    height: 90%;
+    border-radius: 20px;
+    text-align: center;
+    background-size: contain;
+    background-position: center;
+    transition: all ease 0.7s;
+
+}
+
+#card1{
+    background: url("https://images.pexels.com/photos/163526/field-hockey-player-girls-game-163526.jpeg?auto=compress&cs=tinysrgb&w=600");
+}
+
+#card2{
+    background: url("https://images.pexels.com/photos/802112/pexels-photo-802112.jpeg?auto=compress&cs=tinysrgb&w=600");
+}
+
+#card3{
+    background: url("https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=600");
+}
+
+.overlay{
+    background-color:#95c11e;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: all ease 0.7s;
+}
+
+.card:hover .overlay{
+    opacity: 1;
+}
+
+.overlay h4{
+    color: #000;
+    font-size: 38px;
+    padding-top: 60px;
+    margin-bottom: 20px;
+
+}
+
+.overlay p{
+    color: #000;
+    font-size: 15px;
+    
+}
+
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+
+.about-content1{
+    margin-top: 30px;
+    background: linear-gradient(to left bottom ,#04aa04,#95c11e);
+    height: 250px;
+    width: 100%;
+    padding: 0 200px;
+    text-align: center;
+    z-index: 10;
+}
+
+.about-content1 h1{
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 40px;
+    padding-top: 80px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.page3{
+    height: 40vh;
+    width: 100%;
+    position: relative;
+}
+
+.page3 h2{
+    position: absolute;
+    font-size: 100px;
+    top: -23%;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke: 1px #fff;
+}
+
+.cards-container2{
+    margin-top: 90px;
+    height: 30vh;
+    display: flex;
+    justify-content:center;
+    gap: 60px;
+    align-items: center;
+}
+
+.cards{
+    height: 80%;
+    width: 25%;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cards h1{
+    color: #000;
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 32px;
+    position: absolute;
+    z-index: 10;
+    transition: all ease-in-out 0.9s;
+
+}
+
+.cards img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.2;
+    transition: all ease-in-out 0.9s;
+}
+
+.cards:hover h1{
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.cards:hover img{
+    scale: 1;
+}
+
+footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0 100px;
+}
+
+footer > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+}
+#f1 img {
+    height: 100px;
+  }
+  #f1,
+  #f2,
+  #f3,
+  #f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+}
+
+#f2 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+  
+#f3 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+#f4 h4 {
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+
